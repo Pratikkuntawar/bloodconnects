@@ -12,8 +12,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
-
+// app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:3000', // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Enable cookies to be sent
+  };
+  app.use(cors(corsOptions));
 app.get('/', (req, res) => {
     res.send("Welcome to Blood Donation Project");
 });
