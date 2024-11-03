@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.json());
-const cors = require('cors');
 app.use(cors());
 
 app.get('/', (req, res) => {
