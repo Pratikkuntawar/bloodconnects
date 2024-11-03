@@ -7,6 +7,7 @@ const Donor=require('./model/donorSchema')//ensure this path is correct
 const db = require('./db');
 const cookieParser = require('cookie-parser'); // Import cookie-parser
 dotenv.config({ path: './config.env' });
+const cors = require('cors');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
