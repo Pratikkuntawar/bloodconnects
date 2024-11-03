@@ -150,7 +150,7 @@ router.post('/login', async (req, res) => {
             expires: new Date(Date.now() + 2 * 60 * 60 * 1000), // Cookie expires in 2 hours
             httpOnly: true, // Cookie cannot be accessed via JavaScript in the client
             secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
-            sameSite: 'strict', // Prevent CSRF attacks
+            sameSite: 'none', // Prevent CSRF attacks
         });
 
         console.log("Login successful");
