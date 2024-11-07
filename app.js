@@ -13,8 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.json());
 // app.use(cors());
+// const corsOptions = {
+//     origin: 'http://localhost:3000', // Replace with your frontend URL
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+//     credentials: true, // Enable cookies to be sent
+//   };
 const corsOptions = {
-    origin: 'http://localhost:3000', // Replace with your frontend URL
+    origin: 'https://blood-connects.onrender.com', // Updated to deployed frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     credentials: true, // Enable cookies to be sent
   };
